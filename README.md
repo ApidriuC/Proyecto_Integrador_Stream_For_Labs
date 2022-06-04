@@ -21,7 +21,7 @@ Como iniciativa en la solución al manejo de recursos compartidos en pequeñas e
 - [Photo service](https://github.com/IngDeiver/streams-for-labs-photo-service)
 - [File service](https://github.com/IngDeiver/streams-for-labs-file-service)
 - [Sync service](https://github.com/IngDeiver/streams-for-labs-sync-service)
-- [Web client](https://github.com/IngDeiver/streams-for-labs-web-client)
+- [Web client](https://github.com/ApidriuC/Servicio_Stream_For_Labs_Web_Client)
 - [Admin service](https://github.com/IngDeiver/streams-for-labs-admin-service)
 
 
