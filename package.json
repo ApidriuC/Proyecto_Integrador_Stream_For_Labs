@@ -1,0 +1,115 @@
+{
+  "name": "streams-for-labs",
+  "author": "Deiver Carrascal",
+  "email": "ingendeiver@gmail.com",
+  "description": "Streams for labs client",
+  "version": "0.2.0",
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "dependencies": {
+    "@azure/msal-browser": "^2.11.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "dom": "^0.0.3",
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^7.0.3",
+    "install": "^0.13.0",
+    "is-electron": "^2.2.0",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "npm": "^7.8.0",
+    "popper.js": "^1.16.1",
+    "react": "^16.8.4",
+    "react-awesome-lightbox": "^1.8.0",
+    "react-bootstrap-typeahead": "^5.1.4",
+    "react-dom": "^16.8.4",
+    "react-google-recaptcha": "^2.1.0",
+    "react-icons": "^4.2.0",
+    "react-image-gallery": "^1.0.9",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2",
+    "react-toastify": "^7.0.3",
+    "styled-components": "^5.2.1",
+    "sync-files-cipher": "^0.3.5",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron:dev\"",
+    "electron:dev": "wait-on tcp:3000 && electron-forge start",
+    "electron:build-linux": "electron-builder build ",
+    "electron:build-win": "electron-builder build --win msi",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "package": "react-scripts build && electron-forge package",
+    "make": "react-scripts build && electron-forge make"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "concurrently": "^6.0.0",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "wait-on": "^5.3.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "web_client"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "build": {
+    "appId": "upb.edu.co.streamsforlab",
+    "productName": "Streams for lab",
+    "copyright": "Copyright © 2021 Deiver Guerra Carrascal",
+    "win": {
+      "target": "msi",
+      "icon": "build/icons/win/icon.ico"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "build/icons/png",
+      "maintainer": "Repo https://github.com/IngDeiver/integrador-2021-10-web-client/issues"
+    }
+  }
+}
